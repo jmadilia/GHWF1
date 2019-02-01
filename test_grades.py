@@ -15,3 +15,8 @@ def test_single_grade():
 def test_two_grades():
     grades = [50.0, 51.0]
     assert compute_hw_average(grades) == 50.5
+
+def drop_grades_more_than_two_grades():
+    grades = [80, 90, 100]
+    drop_two_lowest(grades)
+    assert grades == [100]
